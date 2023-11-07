@@ -1,1 +1,29 @@
+pipeline {
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+            bat 'C:/Users/SNKCONG/Desktop/Jenkins/build.bat'
+            }
+        }
+        stage('Test') {
+            steps {
+            bat 'C:/Users/SNKCONG/Desktop/Jenkins/test.bat' 
+            }
+        }
+        stage('Package') {
+            steps {
+            bat 'C:/Users/SNKCONG/Desktop/Jenkins/package.bat' 
+            }
+            
+        }
+        stage('Deploy') {
+            steps {
+            bat 'C:/Users/SNKCONG/Desktop/Jenkins/deploy.bat' 
+            }
+            
+        }
+       
+    }
+}
